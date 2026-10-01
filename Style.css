@@ -1,0 +1,1516 @@
+/* =====================================================
+   VERDE VIVO
+   PALETA DE JUGOS - NARANJA / AMARILLO / FRUTAS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, sans-serif;
+
+    background:
+        radial-gradient(circle at 8% 15%, rgba(255, 190, 70, .15), transparent 25%),
+        radial-gradient(circle at 92% 55%, rgba(239, 91, 91, .12), transparent 25%),
+        #fffaf0;
+
+    color: #3c2b20;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================================
+   DECORACIONES
+===================================================== */
+
+.decoracion {
+    position: fixed;
+
+    font-size: 45px;
+
+    opacity: .16;
+
+    z-index: -1;
+
+    animation: flotar 5s ease-in-out infinite;
+}
+
+.decoracion-1 {
+    top: 20%;
+    left: 2%;
+}
+
+.decoracion-2 {
+    top: 60%;
+    right: 2%;
+    animation-delay: 1s;
+}
+
+.decoracion-3 {
+    bottom: 8%;
+    left: 4%;
+    animation-delay: 2s;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado {
+
+    width: min(1200px, 92%);
+
+    margin: 25px auto;
+
+    padding: 15px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 3px solid #f3dfc2;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 12px 30px rgba(119, 72, 36, .12);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.icono {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 32px;
+
+    background: #fff0bd;
+
+    border-radius: 50%;
+
+    border: 3px solid #f4c95d;
+
+    box-shadow:
+        inset 0 -5px 0 rgba(180, 116, 20, .10);
+
+    animation: respirar 3s ease-in-out infinite;
+}
+
+.logo h2 {
+
+    color: #d87516;
+
+    font-size: 24px;
+
+    font-weight: 900;
+}
+
+.logo p {
+
+    color: #9a7960;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* MENU */
+
+.menu {
+
+    display: flex;
+
+    gap: 8px;
+}
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #704b36;
+
+    font-weight: 700;
+
+    padding: 11px 15px;
+
+    border-radius: 14px;
+
+    transition: .3s;
+}
+
+.menu a:hover {
+
+    color: white;
+
+    background: #e88922;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 15px rgba(232, 137, 34, .25);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    width: min(1200px, 92%);
+
+    margin: 30px auto 70px;
+
+    min-height: 500px;
+
+    padding: 55px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0c7,
+            #ffe0bd
+        );
+
+    border: 3px solid #f1d1a8;
+
+    box-shadow:
+        0 25px 50px rgba(141, 86, 37, .15);
+}
+
+
+/* DECORACIÓN HERO */
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: #ffc94f;
+
+    right: -180px;
+
+    top: -170px;
+
+    opacity: .28;
+}
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background: #f18a68;
+
+    left: -130px;
+
+    bottom: -130px;
+
+    opacity: .22;
+}
+
+.hero-texto {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ETIQUETA */
+
+.etiqueta {
+
+    display: inline-block;
+
+    background: #df7119;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 12px rgba(223, 113, 25, .18);
+}
+
+
+/* TITULO */
+
+.hero h1 {
+
+    margin: 22px 0;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    line-height: .95;
+
+    font-weight: 1000;
+
+    color: #553020;
+
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+
+    color: #e57919;
+
+    position: relative;
+}
+
+.hero h1 span::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 100%;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #f5c542;
+
+    transform: rotate(-2deg);
+}
+
+.hero p {
+
+    max-width: 500px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #775f4d;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    border-radius: 18px;
+
+    background: #e67d1d;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 8px 0 #b95d12,
+        0 15px 25px rgba(198, 103, 22, .25);
+
+    transition: .25s;
+}
+
+.boton:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 0 #b95d12,
+        0 20px 30px rgba(198, 103, 22, .3);
+}
+
+.boton:active {
+
+    transform: translateY(3px);
+
+    box-shadow:
+        0 4px 0 #b95d12;
+}
+
+
+/* =====================================================
+   HERO IMAGEN
+===================================================== */
+
+.hero-imagen {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.hero-imagen img {
+
+    width: 100%;
+
+    max-width: 470px;
+
+    border-radius: 42px;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 25px 40px rgba(91, 55, 30, .23);
+
+    transform: rotate(2deg);
+
+    transition: .4s;
+}
+
+.hero-imagen img:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.04);
+}
+
+
+/* =====================================================
+   BURBUJAS
+===================================================== */
+
+.burbuja {
+
+    position: absolute;
+
+    width: 58px;
+
+    height: 58px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.12);
+
+    z-index: 3;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.burbuja-1 {
+    top: 5%;
+    right: 5%;
+}
+
+.burbuja-2 {
+    bottom: 8%;
+    left: 3%;
+    animation-delay: .8s;
+}
+
+.burbuja-3 {
+    top: 45%;
+    right: -4%;
+    animation-delay: 1.5s;
+}
+
+
+/* =====================================================
+   TITULOS
+===================================================== */
+
+.titulo {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+}
+
+.titulo h2 {
+
+    font-size: clamp(35px, 5vw, 52px);
+
+    color: #573625;
+
+    margin-top: 15px;
+
+    font-weight: 1000;
+}
+
+.titulo p {
+
+    margin-top: 12px;
+
+    color: #8b7564;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.productos {
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding: 20px 0 70px;
+}
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+
+    align-items: stretch;
+}
+
+
+/* CARD */
+
+.card {
+
+    background: #ffffff;
+
+    border: 3px solid #f0dfc9;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow:
+        0 12px 25px rgba(104, 67, 39, .10);
+
+    transition: .35s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+.card:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(-1deg);
+
+    box-shadow:
+        0 25px 40px rgba(104, 67, 39, .18);
+
+    border-color: #efbd68;
+}
+
+
+/* NUMERO */
+
+.card-numero {
+
+    position: absolute;
+
+    top: 13px;
+
+    left: 13px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #df751b;
+
+    font-weight: 900;
+
+    font-size: 12px;
+
+    z-index: 3;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* IMAGEN CARD */
+
+.card-imagen {
+
+    height: 215px;
+
+    flex-shrink: 0;
+
+    background: #fff1d2;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.card-imagen img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.card:hover .card-imagen img {
+
+    transform: scale(1.07);
+}
+
+
+/* FRUTA */
+
+.fruta {
+
+    position: absolute;
+
+    right: 13px;
+
+    top: 13px;
+
+    width: 48px;
+
+    height: 48px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 23px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,.13);
+
+    animation: flotar 3s infinite;
+}
+
+
+/* TEXTO CARD */
+
+.card-texto {
+
+    padding: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.card-etiqueta {
+
+    color: #df8b32;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+}
+
+.card h3 {
+
+    font-size: 23px;
+
+    color: #5a3523;
+
+    margin: 7px 0;
+}
+
+.card p {
+
+    color: #806e60;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.card a {
+
+    color: #df7119;
+
+    text-decoration: none;
+
+    font-weight: 900;
+
+    font-size: 14px;
+
+    margin-top: auto;
+}
+
+.card a:hover {
+
+    color: #c14949;
+}
+
+
+/* =====================================================
+   BENEFICIOS
+   AQUÍ SE CORRIGE EL PROBLEMA DE LA FOTO
+===================================================== */
+
+.beneficios {
+
+    width: min(1200px, 92%);
+
+    margin: 20px auto 75px;
+
+    padding: 50px 65px;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr .95fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8f3f32,
+            #b84f38
+        );
+
+    border-radius: 40px;
+
+    color: white;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 22px 40px rgba(117, 55, 39, .23);
+}
+
+
+/* CÍRCULOS DECORATIVOS */
+
+.beneficios::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: #e88a3d;
+
+    right: -120px;
+
+    top: -150px;
+
+    opacity: .35;
+}
+
+.beneficios::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 220px;
+
+    border-radius: 50%;
+
+    background: #f5c542;
+
+    left: -130px;
+
+    bottom: -130px;
+
+    opacity: .3;
+}
+
+
+/* TEXTO */
+
+.beneficios-texto {
+
+    position: relative;
+
+    z-index: 2;
+
+    align-self: center;
+}
+
+.beneficios h2 {
+
+    font-size: clamp(38px, 4.5vw, 56px);
+
+    line-height: .98;
+
+    margin: 18px 0;
+
+    font-weight: 1000;
+}
+
+.beneficios h2 span {
+
+    color: #ffe17b;
+}
+
+.beneficios-texto > p {
+
+    color: #ffe9df;
+
+    line-height: 1.65;
+
+    max-width: 540px;
+
+    margin-bottom: 22px;
+}
+
+
+/* LISTA */
+
+.beneficios-lista {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.beneficio {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: rgba(255,255,255,.10);
+
+    padding: 11px 13px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255,255,255,.16);
+}
+
+.beneficio span {
+
+    width: 26px;
+
+    height: 26px;
+
+    flex-shrink: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #ffe27a;
+
+    color: #814128;
+
+    font-weight: 900;
+}
+
+.beneficio p {
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FOTO DE BENEFICIOS
+===================================================== */
+
+.beneficios-imagen {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    align-self: center;
+
+    padding-top: 0;
+}
+
+.beneficios-imagen img {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: 330px;
+
+    object-fit: cover;
+
+    border-radius: 38px;
+
+    border: 7px solid white;
+
+    box-shadow:
+        0 18px 30px rgba(58, 29, 21, .28);
+
+    transform: rotate(-2deg);
+
+    transition: .4s;
+}
+
+.beneficios-imagen img:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.03);
+}
+
+
+/* =====================================================
+   STICKER
+===================================================== */
+
+.sticker {
+
+    position: absolute;
+
+    right: -15px;
+
+    bottom: -20px;
+
+    width: 95px;
+
+    height: 95px;
+
+    border-radius: 50%;
+
+    background: #ffd13d;
+
+    color: #714026;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    border: 5px solid white;
+
+    transform: rotate(8deg);
+
+    z-index: 4;
+
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.2);
+}
+
+.sticker small {
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+
+    width: min(1200px, 92%);
+
+    margin: auto;
+
+    padding-bottom: 75px;
+}
+
+.galeria-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+.galeria-foto {
+
+    height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 15px 30px rgba(104, 67, 39, .15);
+
+    transition: .35s;
+}
+
+.galeria-foto:hover {
+
+    transform:
+        translateY(-8px)
+        rotate(1deg);
+}
+
+.galeria-foto img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.galeria-foto:hover img {
+
+    transform: scale(1.08);
+}
+
+
+/* TEXTO GALERÍA */
+
+.galeria-texto {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 15px;
+
+    right: 15px;
+
+    background: rgba(255,255,255,.95);
+
+    color: #74432b;
+
+    padding: 13px 16px;
+
+    border-radius: 16px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 7px 15px rgba(0,0,0,.15);
+}
+
+
+/* =====================================================
+   ACCIÓN
+===================================================== */
+
+.accion {
+
+    width: min(1200px, 92%);
+
+    margin: 0 auto 65px;
+
+    padding: 38px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffd34d,
+            #f3a83a
+        );
+
+    box-shadow:
+        0 18px 30px rgba(183, 132, 25, .18);
+}
+
+.accion h2 {
+
+    font-size: 35px;
+
+    color: #563521;
+
+    margin: 10px 0;
+}
+
+.accion p {
+
+    color: #74552e;
+}
+
+.accion .etiqueta {
+
+    background: #a94c2e;
+}
+
+
+/* FRUTA */
+
+.accion-fruta {
+
+    font-size: 85px;
+
+    animation:
+        girar 5s linear infinite;
+}
+
+
+/* BOTÓN CLARO */
+
+.boton-claro {
+
+    background: #ffffff;
+
+    color: #a74e2d;
+
+    box-shadow:
+        0 8px 0 #d19a27,
+        0 15px 25px rgba(99, 78, 20, .18);
+}
+
+.boton-claro:hover {
+
+    box-shadow:
+        0 12px 0 #d19a27,
+        0 20px 30px rgba(99, 78, 20, .22);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #492b20;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.footer-logo {
+
+    font-size: 28px;
+
+    font-weight: 1000;
+
+    color: #ffd75a;
+
+    margin-bottom: 15px;
+}
+
+footer p {
+
+    color: #ddc9bd;
+
+    font-size: 13px;
+
+    margin: 7px;
+}
+
+.footer-frutas {
+
+    margin-top: 20px;
+
+    font-size: 24px;
+
+    letter-spacing: 8px;
+
+    opacity: .9;
+}
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes respirar {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+@keyframes girar {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .encabezado {
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        padding: 45px;
+
+        text-align: center;
+    }
+
+    .hero p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .hero-imagen {
+
+        margin-top: 10px;
+    }
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .beneficios {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 45px;
+    }
+
+    .beneficios-texto {
+
+        text-align: center;
+    }
+
+    .beneficios-texto > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+    .beneficios-lista {
+
+        text-align: left;
+    }
+
+    .beneficios-imagen img {
+
+        max-width: 600px;
+
+        height: 350px;
+    }
+
+    .galeria-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .galeria-foto:last-child {
+
+        grid-column: span 2;
+    }
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .encabezado {
+
+        width: 94%;
+
+        padding: 15px;
+    }
+
+    .menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .menu a {
+
+        padding: 8px 10px;
+
+        font-size: 13px;
+    }
+
+    .hero {
+
+        width: 94%;
+
+        padding: 35px 22px;
+
+        border-radius: 30px;
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+    }
+
+    .productos,
+    .galeria {
+
+        width: 94%;
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios {
+
+        width: 94%;
+
+        padding: 38px 24px;
+
+        border-radius: 30px;
+    }
+
+    .beneficios-lista {
+
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios-imagen img {
+
+        height: 280px;
+    }
+
+    .galeria-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-foto:last-child {
+
+        grid-column: auto;
+    }
+
+    .accion {
+
+        width: 94%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 35px 25px;
+    }
+
+    .accion-fruta {
+
+        font-size: 65px;
+    }
+
+    .accion h2 {
+
+        font-size: 28px;
+    }
+}
